@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/8801701715369"
+      href="https://wa.me/8801317878615"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
@@ -33,7 +33,7 @@ const WhatsAppButton = () => {
         hover:bg-[#1EBE5D]
         hover:shadow-md
         hover:shadow-[#25D366]/40
-
+w-full
         active:scale-95
       "
     >
