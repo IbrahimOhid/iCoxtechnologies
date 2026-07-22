@@ -11,6 +11,7 @@ import { HiSparkles } from "react-icons/hi";
 
 import HeroImage from "/images/hero.webp";
 import Button from "../Button/Button";
+import FloatingCard from "../Card/FloatingCard";
 
 const Hero = () => {
   return (
@@ -35,25 +36,24 @@ const Hero = () => {
         {/* LEFT */}
         <div>
           {/* Heading */}
-
           <h1
             className="
-              mt-6
-              text-4xl
-              font-black
-              leading-tight
-              tracking-tight
-              text-slate-900
-
-              sm:text-5xl
-
-              lg:text-6xl
-            "
+    text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+    font-black leading-tight tracking-tight
+    text-slate-900
+  "
           >
-            We design & build
-            <span className="text-primary"> high-impact digital </span>
-            <br />
-            Experiences
+            <span className="block">We design & build</span>
+            <span
+              className="
+      inline-block
+      bg-gradient-to-r from-emerald-500 to-cyan-500
+      bg-clip-text text-transparent
+    "
+            >
+              high-impact digital
+            </span>
+            <span className="block">Experiences</span>
           </h1>
 
           {/* Description */}
@@ -64,7 +64,7 @@ const Hero = () => {
               max-w-xl
               text-base
               leading-8
-              text-slate-600
+              text-slate
 
               sm:text-lg
             "
@@ -145,114 +145,10 @@ const Hero = () => {
               w-full
               max-w-xl
               rounded-3xl
-              shadow-2xl
             "
           />
           {/* Floating Card */}
-          <div
-            className="
-    absolute
-    left-2
-    top-8
-    z-20
-    rounded-3xl
-    border
-    border-white/40
-    bg-white/90
-    px-5
-    py-4
-    shadow-[0_20px_45px_rgba(15,23,42,0.15)]
-    backdrop-blur-xl
-    transition-all
-    duration-500
-    hover:-translate-y-2
-    hover:shadow-[0_30px_60px_rgba(14,165,233,0.25)]
-
-    sm:left-4
-    lg:-left-10
-    lg:top-12
-  "
-          >
-            <div className="flex items-center gap-4">
-              <div
-                className="
-        flex
-        h-14
-        w-14
-        items-center
-        justify-center
-        rounded-2xl
-        bg-gradient-to-br
-        from-primary
-        to-cyan-500
-        text-white
-        shadow-lg
-      "
-              >
-                <FaProjectDiagram className="text-xl" />
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-black text-slate-900">250+</h3>
-
-                <p className="text-sm font-medium text-slate-500">
-                  Projects Completed
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className="
-    absolute
-    right-2
-    bottom-8
-    z-20
-    rounded-3xl
-    border
-    border-white/40
-    bg-white/90
-    px-5
-    py-4
-    shadow-[0_20px_45px_rgba(15,23,42,0.15)]
-    backdrop-blur-xl
-    transition-all
-    duration-500
-    hover:-translate-y-2
-    hover:shadow-[0_30px_60px_rgba(14,165,233,0.25)]
-
-    sm:right-4
-    lg:-right-10
-    lg:bottom-12
-  "
-          >
-            <div className="flex items-center gap-4">
-              <div
-                className="
-        flex
-        h-14
-        w-14
-        items-center
-        justify-center
-        rounded-2xl
-        bg-gradient-to-br
-        from-emerald-500
-        to-cyan-500
-        text-white
-        shadow-lg
-      "
-              >
-                <FaUsers className="text-xl" />
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-black text-slate-900">120+</h3>
-
-                <p className="text-sm font-medium text-slate-500">
-                  Happy Clients
-                </p>
-              </div>
-            </div>
-          </div>
+          <FloatingCard />
         </div>
       </div>
     </section>

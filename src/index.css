@@ -12,10 +12,10 @@
   --color-slate: #4a5565 ;
 }
 .container-section {
-  @apply max-w-screen-2xl container mx-auto py-5  px-4 sm:px-6 lg:px-8 
+  @apply max-w-screen-2xl container mx-auto py-8  px-4 sm:px-6 lg:px-8 
 }
 
-/*company logo loop*/
+ /*client logo loop*/
 .marquee-track {
   width: max-content;
   animation: marquee 30s linear infinite;
