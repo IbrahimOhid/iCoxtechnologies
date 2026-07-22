@@ -33,7 +33,7 @@ const WhatsAppButton = () => {
         hover:bg-[#1EBE5D]
         hover:shadow-md
         hover:shadow-[#25D366]/40
-
+w-full sm:w-auto
         active:scale-95
       "
     >

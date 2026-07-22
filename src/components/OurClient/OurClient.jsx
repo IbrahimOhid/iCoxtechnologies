@@ -3,65 +3,68 @@ import Heading from "../Heading/Heading";
 
 const OurClient = () => {
   return (
-    <section className="container-section">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading*/}
-
+    <section className="container-section overflow-hidden">
+      <div className="mx-auto max-w-7xl">
         <Heading
-          title={"Trusted by industry leaders"}
-          paragraph={"Our Happy Clients"}
-          description={
-            "Join 10+ businesses that have trusted us to elevate their digital presence."
-          }
+          title="Trusted by Industry Leaders"
+          paragraph="Our Happy Clients"
+          description="Join 10+ businesses that trust us to build exceptional digital experiences."
         />
 
         {/* Marquee */}
-                  <div className="marquee-track flex min-w-max items-center gap-4 sm:gap-6 lg:gap-8">
-        
-                    {[...clientLogo, ...clientLogo].map((item, index) => (
-                      <div
-                        key={index}
-                        className="
-                          flex-shrink-0
-                          flex
-                          items-center
-                          justify-center
-                          min-w-[140px]
-                          sm:min-w-[170px]
-                          md:min-w-[200px]
-                          lg:min-w-[220px]
-                          h-[90px]
-                          sm:h-[110px]
-                          md:h-[120px]
-                          rounded-3xl
-                          bg-white
-                          border border-slate-100
-                          shadow
-                          transition-all duration-300
-                          hover:-translate-y-1
-                          hover:shadow-md
-                        "
-                      >
-                        <img
-                          src={item.logo}
-                          alt={`Customer ${index}`}
-                          draggable={false}
-                          className="
-                            h-20
+        <div className="relative mt-12 overflow-hidden">
+          <div className="client-marquee flex w-max items-center gap-4 sm:gap-6">
+            {[...clientLogo, ...clientLogo].map((item, index) => (
+              <div
+                key={index}
+                className="
+                  group
+                  flex
+                  h-24
+                  w-40
+                  sm:h-28
+                  sm:w-48
+                  lg:h-32
+                  lg:w-56
+                  flex-shrink-0
+                  items-center
+                  justify-center
+                  rounded-3xl
+                  border
+                  border-slate-200
+                  bg-white
+                  p-5
+                  shadow-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-primary/20
+                  hover:shadow-xl
+                "
+              >
+                <img
+                  src={item.logo}
+                  alt={item.name || `Client ${index + 1}`}
+                  loading="lazy"
+                  draggable={false}
+                  className="
+                     h-20
                             sm:h-16
                             md:h-16
                             lg:h-20
                             xl:h-28
                             w-auto
-                            object-contain
-                            select-none
-                            transition-transform duration-300
-                            group-hover:scale-105
-                          "
-                        />
-                      </div>
-                    ))}
-                  </div>
+                    w-auto
+                    object-contain
+                    transition-transform
+                    duration-300
+                    group-hover:scale-110
+                  "
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

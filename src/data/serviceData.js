@@ -5,6 +5,7 @@ import {
   FaPaintBrush,
   FaSearch,
   FaVideo,
+  FaFacebook,
 } from "react-icons/fa";
 
 export const servicesData = [
@@ -78,5 +79,19 @@ export const servicesData = [
       "Social media & promotional videos",
       "3 month free technical support",
     ],
+  },
+  {
+    id: 6, 
+    icon: FaFacebook,
+    title: "Facebook Page Setup",
+    description:
+      "Establish a powerful Facebook presence with a professionally designed page, optimized for engagement and conversions.",
+    features: [
+      "Page creation & branding setup",
+      "Cover photo & profile design",
+      "About section & business info",
+      "Content strategy & posting schedule",
+      "3 month free technical support",
+    ]
   },
 ];

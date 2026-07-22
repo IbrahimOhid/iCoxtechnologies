@@ -7,58 +7,9 @@ import {
   FaArrowRight,
   FaSearch,
 } from "react-icons/fa";
-
-// ─── Sample Project Data ───
-const projectsData = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    category: "Websites",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
-    description: "Modern online store with seamless checkout",
-  },
-  {
-    id: 2,
-    title: "Health Tracking App",
-    category: "App Designs",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-    description: "UI/UX for wellness mobile application",
-  },
-  {
-    id: 3,
-    title: "Brand Identity Suite",
-    category: "Graphics",
-    image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    description: "Complete branding for a tech startup",
-  },
-  {
-    id: 4,
-    title: "University Admission Portal",
-    category: "Admission",
-    image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600&h=400&fit=crop",
-    description: "Streamlined admission process for students",
-  },
-  {
-    id: 5,
-    title: "Real Estate Dashboard",
-    category: "Websites",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    description: "Interactive property management platform",
-  },
-  {
-    id: 6,
-    title: "Food Delivery App",
-    category: "App Designs",
-    image:
-      "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&h=400&fit=crop",
-    description: "User-friendly interface for food ordering",
-  },
-];
+import Heading from "../Heading/Heading";
+import { projectsData } from "../../data/projectsData";
+import Button from "../../components/Button/Button";
 
 const categoryIcons = {
   All: FaSearch,
@@ -77,21 +28,16 @@ const OurQualityWork = () => {
       : projectsData.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
+    <section className="container-section py-16 sm:py-20 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ─── Header ─── */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-            Our Portfolio
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-            Check Our Quality Work
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Explore our latest projects across different domains – crafted with
-            passion and precision.
-          </p>
-        </div>
+        {/* Heading */}
+        <Heading
+          title={"Our Portfolio"}
+          paragraph={"Check Our Quality Work"}
+          description={
+            "Explore our latest projects across different domains – crafted with passion and precision."
+          }
+        />
 
         {/* ─── Filter Tabs ─── */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16">
@@ -105,11 +51,11 @@ const OurQualityWork = () => {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`
-                  inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
+                  inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer
                   ${
                     isActive
                       ? "bg-primary text-white shadow-lg shadow-primary/30 scale-105"
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:scale-105"
+                      : "bg-primary/10 text-slate-700 hover:bg-primary/20 hover:scale-105"
                   }
                   ${isAdmission && !isActive ? "border-2 border-primary/30 hover:border-primary" : ""}
                   ${isAdmission && isActive ? "bg-gradient-to-r from-primary to-secondary shadow-lg shadow-primary/30" : ""}
@@ -142,7 +88,7 @@ const OurQualityWork = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
                 {/* Overlay on hover */}
@@ -153,26 +99,26 @@ const OurQualityWork = () => {
                   {project.category}
                 </span>
 
-                {/* View Project link (on hover) */}
+                {/* View Project button (on hover) */}
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                   <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-white bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-primary transition-colors"
+                    href={project.link || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full text-sm font-medium text-white bg-gradient-to-r from-primary via-sky-500 to-cyan-500 px-4 py-2.5 rounded-full  transition-all duration-300 shadow-lg shadow-primary/30"
                   >
                     View Project
-                    <FaArrowRight className="h-3.5 w-3.5" />
+                    <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-5 sm:p-6">
-                <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="mt-1 text-sm text-slate-500">
-                  {project.description}
-                </p>
+                <p className="mt-1 text-sm text-slate">{project.description}</p>
               </div>
             </div>
           ))}
@@ -182,20 +128,14 @@ const OurQualityWork = () => {
         <div className="mt-16 sm:mt-20 text-center bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
-              How can we help you?
+              Ready to grow your brand?
             </h3>
             <p className="mt-3 text-base sm:text-lg text-slate-600">
-              Let's discuss your next project – we'd love to bring your ideas to
-              life.
+              Partner with our agency to design, build and scale digital
+              products that deliver real business results.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 min-h-[48px]"
-              >
-                Start a Project
-                <FaArrowRight className="h-4 w-4" />
-              </a>
+              <Button value={"Start a Project"} phone={"01317878615"} />
               <a
                 href="#"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-3.5 text-sm font-semibold text-slate-700 hover:border-primary hover:text-primary transition-all duration-300 min-h-[48px]"

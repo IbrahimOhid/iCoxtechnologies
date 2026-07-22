@@ -8,7 +8,7 @@
   --font-poppins: "Poppins", sans-serif;
 
   --color-primary: #196BB5;
-  --color-secondary: #FDA93F;
+  --color-secondary: oklch(68.5% 0.169 237.323);
   --color-slate: #4a5565 ;
 }
 .container-section {
@@ -16,21 +16,19 @@
 }
 
  /*client logo loop*/
-.marquee-track {
-  width: max-content;
+.client-marquee {
   animation: marquee 30s linear infinite;
 }
 
-.marquee-track:hover {
+.client-marquee:hover {
   animation-play-state: paused;
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(0%);
   }
-
-  to {
+  100% {
     transform: translateX(-50%);
   }
-} 
+}
