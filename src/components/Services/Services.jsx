@@ -3,14 +3,13 @@ import { servicesData } from "../../data/serviceData";
 import Button from "../Button/Button";
 import WhatsAppButton from "../Button/WhatsAppButton";
 import Heading from "../Heading/Heading";
+import GrowBrand from "../GrowBrand/GrowBrand";
 
 const Services = () => {
   return (
     <section className="container-section overflow-hidden">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        
-
         <Heading
           title={"Everything your brand needs to grow"}
           paragraph={"Professional Digital Services"}
@@ -143,6 +142,7 @@ const Services = () => {
           })}
         </div>
       </div>
+      <GrowBrand/>
     </section>
   );
 };

@@ -22,9 +22,9 @@ export const navbarData = [
   },
   {
     id: 3,
-    name: "Team",
-    path: "/team",
-    icon: FaUsers,
+    name: "Work",
+    path: "/work",
+    icon: FaInfoCircle,
   },
   {
     id: 4,

@@ -5,6 +5,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { LuMapPinned } from "react-icons/lu";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { socialLinks } from "../../data/socialData";
+import GrowBrand from "../../components/GrowBrand/GrowBrand";
 
 const ContactUs = () => {
   return (
@@ -163,6 +164,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <GrowBrand/>
     </section>
   );
 };

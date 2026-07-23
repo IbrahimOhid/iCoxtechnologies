@@ -38,7 +38,7 @@ const Header = () => {
               <img
                 src={Logo}
                 alt="Company logo"
-                className="h-24 w-auto sm:h-24 lg:h-44 object-contain select-none"
+                className="h-24 w-auto -ml-5 sm:h-24 lg:h-44 object-contain select-none"
               />
             </NavLink>
 

@@ -12,6 +12,7 @@ import { HiSparkles } from "react-icons/hi";
 import HeroImage from "/images/hero.webp";
 import Button from "../Button/Button";
 import FloatingCard from "../Card/FloatingCard";
+import AllWorkButton from "../Button/AllWorkButton";
 
 const Hero = () => {
   return (
@@ -38,7 +39,7 @@ const Hero = () => {
           {/* Heading */}
           <h1
             className="
-    text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
     font-black leading-tight tracking-tight
     text-slate-900
   "
@@ -88,33 +89,7 @@ const Hero = () => {
           >
             <Button value={"Let's Talk"} phone={"01317878615"} />
 
-            <button
-              className="
-    inline-flex
-    items-center
-    justify-center
-    gap-2
-    rounded-2xl
-    border
-    border-slate-300
-    bg-white
-    px-8
-    py-4
-    text-sm
-    font-semibold
-    text-slate-800
-    shadow-sm
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:border-primary
-    hover:text-primary
-    hover:shadow-lg cursor-pointer
-  "
-            >
-              View Our Work
-              <FaArrowRight className="text-xs" />
-            </button>
+            <AllWorkButton value={"View Our Work"}/>
           </div>
         </div>
 
