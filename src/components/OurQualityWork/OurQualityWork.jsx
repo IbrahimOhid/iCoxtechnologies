@@ -42,13 +42,10 @@ const OurQualityWork = () => {
   }, [activeCategory]);
 
   return (
-    <section className="container-section py-12 ">
+    <section id="project" className="container-section py-12 ">
       {/* SECTION HEADING */}
       <div className="mx-auto max-w-3xl text-center">
-        <Heading
-          title="Our Portfolio"
-          paragraph="Check Our Quality Work"
-        />
+        <Heading title="Our Portfolio" paragraph="Check Our Quality Work" />
       </div>
 
       {/* CATEGORY FILTER */}
@@ -231,7 +228,6 @@ const OurQualityWork = () => {
                     group-hover:scale-105
                   "
                 />
-
 
                 {/* CATEGORY BADGE*/}
                 <span

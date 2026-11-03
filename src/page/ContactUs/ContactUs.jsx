@@ -9,7 +9,10 @@ import GrowBrand from "../../components/GrowBrand/GrowBrand";
 
 const ContactUs = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
+    <section
+      id="contact"
+      className="py-12 sm:py-16 md:py-20 bg-white overflow-hidden"
+    >
       <div className="container-section">
         {/* ─── Heading ─── */}
         <Heading
@@ -164,7 +167,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <GrowBrand/>
+      <GrowBrand />
     </section>
   );
 };

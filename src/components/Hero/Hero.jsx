@@ -16,7 +16,7 @@ import AllWorkButton from "../Button/AllWorkButton";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section id="aboutUs" className="relative overflow-hidden bg-white">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl" />

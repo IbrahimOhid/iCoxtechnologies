@@ -6,203 +6,260 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
+import { MdPhone, MdEmail, MdLocationOn, MdArrowOutward } from "react-icons/md";
 
 const Footer = () => {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: FaFacebookF,
+      href: "https://www.facebook.com/iCoxtechnologies",
+    },
+    { name: "Instagram", icon: FaInstagram, href: "#" },
+    { name: "LinkedIn", icon: FaLinkedinIn, href: "#" },
+    { name: "X", icon: FaXTwitter, href: "#" },
+    { name: "YouTube", icon: FaYoutube, href: "#" },
+  ];
+
+  const quickLinks = [
+    { name: "About Us", href: "#aboutUs" },
+    { name: "Our Services", href: "#services" },
+    { name: "Our Projects", href: "#project" },
+    { name: "Contact Us", href: "#contact" },
+  ];
+
+  const services = [
+    "Web Development",
+    "Digital Marketing",
+    "UI/UX Design",
+    "Graphic Design",
+    "SEO Optimization",
+  ];
+
+  const contactInfo = [
+    {
+      icon: MdPhone,
+      label: "Phone",
+      value: "+880 1317-878615",
+      href: "tel:+8801317878615",
+    },
+    {
+      icon: MdEmail,
+      label: "Email",
+      value: "icoxtechnologies@gmail.com",
+      href: "mailto:icoxtechnologies@gmail.com",
+    },
+    {
+      icon: MdLocationOn,
+      label: "Location",
+      value: "Islamabad, Eidgaon, Cox's Bazar",
+      href: "https://www.google.com/maps/search/?api=1&query=Eidgaon%2C+Cox%27s+Bazar",
+    },
+  ];
+
+  const linkClass =
+    "group flex w-fit items-center gap-2.5 text-sm text-slate-600 transition-all duration-300 hover:translate-x-1 hover:text-blue-600";
+
+  const headingClass =
+    "mb-6 text-sm font-bold uppercase tracking-[0.12em] text-slate-900";
+
   return (
-    <footer className="relative container-section overflow-hidden bg-gradient-to-r from-primary via-sky-600 to-cyan-600">
-      <div className=" relative z-10">
-        {/* ─── Footer Grid ─── */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Column 1: Brand */}
-          <div>
-            <h3 className="mb-4 text-xl font-bold text-white">
-              iCox Technologies
-            </h3>
-            <p className="text-sm leading-relaxed text-white/80">
-              We are a digital agency focused on strategy, design and
-              development—helping brands build meaningful digital experiences
-              and grow sustainably.
+    <footer className="relative overflow-hidden border-t border-slate-100 bg-white">
+      {/* Decorative Background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-sky-100/60 blur-[100px]"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-blue-50 blur-[100px]"
+      />
+
+      <div className="container-section relative z-10 py-14 sm:py-16 lg:py-20">
+        {/* Top Brand Section */}
+        <div className="mb-14 flex flex-col justify-between gap-8 rounded-2xl border border-slate-100 bg-gradient-to-r from-sky-50 via-white to-blue-50 p-6 shadow-sm sm:p-8 md:flex-row md:items-center">
+          <div className="max-w-xl">
+            <a href="/" className="inline-flex items-center gap-3">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-700 text-lg font-extrabold text-white shadow-lg shadow-blue-500/20">
+                iC
+              </span>
+
+              <span className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+                iCox{" "}
+                <span className="bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
+                  Technologies
+                </span>
+              </span>
+            </a>
+
+            <p className="mt-4 max-w-lg text-sm leading-7 text-slate-600 sm:text-base">
+              We transform ideas into impactful digital experiences through
+              thoughtful strategy, creative design, and reliable technology.
             </p>
-            <div className="mt-6 flex gap-3">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-primary"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-primary"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-primary"
-              >
-                <FaLinkedinIn />
-              </a>
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-primary"
-              >
-                <FaXTwitter />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-primary"
-              >
-                <FaYoutube />
-              </a>
+          </div>
+
+          <a
+            href="#contact"
+            className="group inline-flex w-fit items-center gap-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-700 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
+          >
+            Let's Work Together
+            <MdArrowOutward className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </a>
+        </div>
+
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+          {/* About Company */}
+          <div>
+            <h3 className={headingClass}>
+              About Us
+              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+            </h3>
+
+            <p className="text-sm leading-7 text-slate-600">
+              Your digital growth partner. We help businesses build a stronger
+              online presence with modern, creative, and user-focused digital
+              solutions.
+            </p>
+
+            {/* Social Media */}
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {socialLinks.map(({ name, icon: Icon, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  aria-label={name}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
+                >
+                  <Icon className="text-base" />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
+            <h3 className={headingClass}>
               Quick Links
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Contact
-                </a>
-              </li>
+              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+            </h3>
+
+            <ul className="space-y-4">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className={linkClass}>
+                    <span className="h-1.5 w-1.5 rounded-full bg-sky-500 transition-all duration-300 group-hover:w-3" />
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Our Services */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
+            <h3 className={headingClass}>
               Our Services
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Web Development
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Digital Marketing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Graphic Design
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  SEO Optimization
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 transition hover:text-white"
-                >
-                  Video Editing
-                </a>
-              </li>
+              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+            </h3>
+
+            <ul className="space-y-4">
+              {services.map((service) => (
+                <li key={service}>
+                  <a href="#services" className={linkClass}>
+                    <span>{service}</span>
+                    <MdArrowOutward className="text-base text-blue-500 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Contact Information */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
-              Contact Info
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-3 text-white/80">
-                <MdPhone className="mt-0.5 text-lg text-white/60" />
-                <span>+880 1317-878615</span>
-              </li>
-              <li className="flex items-start gap-3 text-white/80">
-                <MdEmail className="mt-0.5 text-lg text-white/60" />
-                <span>icoxtechnologies@gmail.com</span>
-              </li>
-              <li className="flex items-start gap-3 text-white/80">
-                <MdLocationOn className="mt-0.5 text-lg text-white/60" />
-                <span>Islamabad, Eidgaon, Cox's Bazar</span>
-              </li>
+            <h3 className={headingClass}>
+              Get In Touch
+              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+            </h3>
+
+            <p className="mb-6 text-sm leading-6 text-slate-600">
+              Have a project in mind? Let's discuss how we can help your
+              business grow.
+            </p>
+
+            <ul className="space-y-5">
+              {contactInfo.map(({ icon: Icon, label, value, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target={label === "Location" ? "_blank" : undefined}
+                    rel={
+                      label === "Location" ? "noopener noreferrer" : undefined
+                    }
+                    className="group flex items-start gap-3"
+                  >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-100 bg-sky-50 text-xl text-blue-600 transition-all duration-300 group-hover:border-blue-600 group-hover:bg-blue-600 group-hover:text-white">
+                      <Icon />
+                    </span>
+
+                    <span className="min-w-0 pt-0.5">
+                      <span className="block text-xs font-medium text-slate-500">
+                        {label}
+                      </span>
+
+                      <span className="mt-1 block break-words text-sm font-medium leading-5 text-slate-700 transition-colors duration-300 group-hover:text-blue-600">
+                        {value}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* ─── Bottom Bar ─── */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
-          <p className="text-center text-sm text-white/70 md:text-left">
+        {/* Bottom Footer Bar */}
+        <div className="mt-14 flex flex-col items-center justify-between gap-5 border-t border-slate-200 pt-7 sm:mt-16 md:flex-row">
+          <p className="text-center text-xs leading-6 text-slate-500 sm:text-sm md:text-left">
             © {new Date().getFullYear()}{" "}
-            <span className="font-bold text-white">iCox Technologies</span>. All
-            rights reserved.
+            <a
+              href="https://www.facebook.com/iCoxtechnologies"
+              target="_blank"
+              className="font-bold text-slate-800 transition-colors hover:text-blue-600"
+            >
+              iCox Technologies
+            </a>
+            . All rights reserved.
           </p>
 
-          {/* Scroll Button */}
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 sm:gap-5 sm:text-sm">
+            <a
+              href="/privacy-policy"
+              className="transition-colors hover:text-blue-600"
+            >
+              Privacy Policy
+            </a>
+
+            <span className="h-1 w-1 rounded-full bg-slate-300" />
+
+            <a href="/terms" className="transition-colors hover:text-blue-600">
+              Terms of Use
+            </a>
+          </div>
+
+          {/* Back To Top */}
           <button
             type="button"
             onClick={scrollTop}
             aria-label="Back to top"
-            className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/25 bg-white/15 text-white shadow-[0_14px_35px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white hover:text-primary active:scale-95 sm:h-14 sm:w-14"
+            className="group flex h-11 w-11 items-center justify-center rounded-xl border border-sky-100 bg-sky-50 text-blue-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/20 active:scale-95"
           >
-            <SlArrowUp className="text-lg transition-transform duration-300 group-hover:-translate-y-1 sm:text-xl" />
+            <SlArrowUp className="text-lg transition-transform duration-300 group-hover:-translate-y-1" />
           </button>
         </div>
       </div>

@@ -7,13 +7,15 @@ import GrowBrand from "../GrowBrand/GrowBrand";
 
 const Services = () => {
   return (
-    <section className="container-section overflow-hidden">
+    <section id="services" className="container-section overflow-hidden">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <Heading
           title={"Everything your brand needs to grow"}
           paragraph={"Professional Digital Services"}
-          description={"From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."}
+          description={
+            "From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."
+          }
         />
 
         {/* Services */}
@@ -142,7 +144,7 @@ const Services = () => {
           })}
         </div>
       </div>
-      <GrowBrand/>
+      <GrowBrand />
     </section>
   );
 };
