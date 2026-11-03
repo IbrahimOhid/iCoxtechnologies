@@ -101,7 +101,7 @@ const Header = () => {
                         `flex items-center gap-1.5 px-3 py-2 rounded-full transition-all duration-300 
                          ${
                            isActive
-                             ? "bg-primary text-white shadow-sm shadow-primary/30"
+                             ? "bg-gradient-to-r from-sky-500 to-blue-700 text-white shadow-sm shadow-primary/30"
                              : "text-slate-700 hover:bg-primary/5 hover:text-primary"
                          }`
                       }
