@@ -48,7 +48,7 @@ const Hero = () => {
             <span
               className="
       inline-block
-      bg-gradient-to-r from-emerald-500 to-cyan-500
+      bg-gradient-to-r from-green-500 to-lime-500
       bg-clip-text text-transparent
     "
             >
@@ -89,7 +89,7 @@ const Hero = () => {
           >
             <Button value={"Let's Talk"} phone={"01317878615"} />
 
-            <AllWorkButton value={"View Our Work"}/>
+            <AllWorkButton value={"View Our Work"} />
           </div>
         </div>
 

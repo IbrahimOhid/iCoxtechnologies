@@ -44,7 +44,7 @@ const Services = () => {
         transition-all
         duration-500
         hover:-translate-y-2
-        hover:border-primary/20
+        hover:border-secondary/20
         hover:shadow-[0_25px_60px_rgba(14,165,233,0.18)]
       "
               >
@@ -58,10 +58,8 @@ const Services = () => {
           w-full
           origin-left
           scale-x-0
-          bg-gradient-to-r
-          from-primary
-          via-sky-500
-          to-cyan-500
+                bg-gradient-to-r from-green-500 to-lime-500
+
           transition-transform
           duration-500
           ease-out
@@ -78,15 +76,15 @@ const Services = () => {
           items-center
           justify-center
           rounded-2xl
-          bg-primary/10
-          text-primary
+                bg-gradient-to-r from-green-500 to-lime-500
+
+          text-white
           shadow-sm
           transition-all
           duration-500
           group-hover:scale-110
           group-hover:-rotate-6
-          group-hover:bg-primary
-          group-hover:text-white
+          group-hover:bg-secondary
           group-hover:shadow-lg
         "
                 >

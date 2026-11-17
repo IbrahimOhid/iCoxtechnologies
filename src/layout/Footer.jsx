@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { MdPhone, MdEmail, MdLocationOn, MdArrowOutward } from "react-icons/md";
+import AllWorkButton from "../components/Button/AllWorkButton";
 
 const Footer = () => {
   const scrollTop = () => {
@@ -18,6 +19,7 @@ const Footer = () => {
       name: "Facebook",
       icon: FaFacebookF,
       href: "https://www.facebook.com/iCoxtechnologies",
+      target: "_blank",
     },
     { name: "Instagram", icon: FaInstagram, href: "#" },
     { name: "LinkedIn", icon: FaLinkedinIn, href: "#" },
@@ -62,36 +64,21 @@ const Footer = () => {
   ];
 
   const linkClass =
-    "group flex w-fit items-center gap-2.5 text-sm text-slate-600 transition-all duration-300 hover:translate-x-1 hover:text-blue-600";
+    "group flex w-fit items-center gap-2.5 text-sm text-slate-600 transition-all duration-300 hover:translate-x-1 hover:text-primary";
 
   const headingClass =
     "mb-6 text-sm font-bold uppercase tracking-[0.12em] text-slate-900";
 
   return (
-    <footer className="relative overflow-hidden border-t border-slate-100 bg-white">
-      {/* Decorative Background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-sky-100/60 blur-[100px]"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-blue-50 blur-[100px]"
-      />
-
+    <footer className="relative overflow-hidden bg-white">
       <div className="container-section relative z-10 py-14 sm:py-16 lg:py-20">
         {/* Top Brand Section */}
         <div className="mb-14 flex flex-col justify-between gap-8 rounded-2xl border border-slate-100 bg-gradient-to-r from-sky-50 via-white to-blue-50 p-6 shadow-sm sm:p-8 md:flex-row md:items-center">
           <div className="max-w-xl">
             <a href="/" className="inline-flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-700 text-lg font-extrabold text-white shadow-lg shadow-blue-500/20">
-                iC
-              </span>
-
               <span className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
                 iCox{" "}
-                <span className="bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-transparent">
+                <span className="      bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text text-transparent">
                   Technologies
                 </span>
               </span>
@@ -103,13 +90,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="group inline-flex w-fit items-center gap-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-700 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
-          >
-            Let's Work Together
-            <MdArrowOutward className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
+          <AllWorkButton value={"Let's Work Together"} path={"contact"} />
         </div>
 
         {/* Main Footer Grid */}
@@ -118,7 +99,10 @@ const Footer = () => {
           <div>
             <h3 className={headingClass}>
               About Us
-              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+              <span
+                className="mt-3 block h-1 w-10 rounded-full  bg-gradient-to-r from-green-500 to-lime-500
+"
+              />
             </h3>
 
             <p className="text-sm leading-7 text-slate-600">
@@ -129,12 +113,13 @@ const Footer = () => {
 
             {/* Social Media */}
             <div className="mt-6 flex flex-wrap gap-2.5">
-              {socialLinks.map(({ name, icon: Icon, href }) => (
+              {socialLinks.map(({ name, icon: Icon, href, target }) => (
                 <a
                   key={name}
                   href={href}
                   aria-label={name}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
+                  target={target}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-secondary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
                 >
                   <Icon className="text-base" />
                 </a>
@@ -146,14 +131,20 @@ const Footer = () => {
           <div>
             <h3 className={headingClass}>
               Quick Links
-              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+              <span
+                className="mt-3 block h-1 w-10 rounded-full       bg-gradient-to-r from-green-500 to-lime-500
+"
+              />
             </h3>
 
             <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className={linkClass}>
-                    <span className="h-1.5 w-1.5 rounded-full bg-sky-500 transition-all duration-300 group-hover:w-3" />
+                    <span
+                      className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-green-500 to-lime-500
+ transition-all duration-300 group-hover:w-3"
+                    />
                     {link.name}
                   </a>
                 </li>
@@ -165,7 +156,7 @@ const Footer = () => {
           <div>
             <h3 className={headingClass}>
               Our Services
-              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+              <span className="mt-3 block h-1 w-10 rounded-full       bg-gradient-to-r from-green-500 to-lime-500" />
             </h3>
 
             <ul className="space-y-4">
@@ -173,7 +164,7 @@ const Footer = () => {
                 <li key={service}>
                   <a href="#services" className={linkClass}>
                     <span>{service}</span>
-                    <MdArrowOutward className="text-base text-blue-500 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
+                    <MdArrowOutward className="text-base text-secondary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
                   </a>
                 </li>
               ))}
@@ -184,7 +175,7 @@ const Footer = () => {
           <div>
             <h3 className={headingClass}>
               Get In Touch
-              <span className="mt-3 block h-1 w-10 rounded-full bg-gradient-to-r from-sky-500 to-blue-600" />
+              <span className="mt-3 block h-1 w-10 rounded-full       bg-gradient-to-r from-green-500 to-lime-500" />
             </h3>
 
             <p className="mb-6 text-sm leading-6 text-slate-600">
@@ -203,7 +194,10 @@ const Footer = () => {
                     }
                     className="group flex items-start gap-3"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-100 bg-sky-50 text-xl text-blue-600 transition-all duration-300 group-hover:border-blue-600 group-hover:bg-blue-600 group-hover:text-white">
+                    <span
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-100       bg-gradient-to-r from-green-500 to-lime-500
+ text-xl text-white transition-all duration-300 group-hover:border-secondary group-hover:bg-secondary group-hover:text-white"
+                    >
                       <Icon />
                     </span>
 
@@ -212,7 +206,7 @@ const Footer = () => {
                         {label}
                       </span>
 
-                      <span className="mt-1 block break-words text-sm font-medium leading-5 text-slate-700 transition-colors duration-300 group-hover:text-blue-600">
+                      <span className="mt-1 block break-words text-sm font-medium leading-5 text-slate-700 transition-colors duration-300 group-hover:text-primary">
                         {value}
                       </span>
                     </span>
@@ -237,7 +231,7 @@ const Footer = () => {
             . All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 sm:gap-5 sm:text-sm">
+          {/* <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 sm:gap-5 sm:text-sm">
             <a
               href="/privacy-policy"
               className="transition-colors hover:text-blue-600"
@@ -250,14 +244,15 @@ const Footer = () => {
             <a href="/terms" className="transition-colors hover:text-blue-600">
               Terms of Use
             </a>
-          </div>
+          </div> */}
 
           {/* Back To Top */}
           <button
             type="button"
             onClick={scrollTop}
             aria-label="Back to top"
-            className="group flex h-11 w-11 items-center justify-center rounded-xl border border-sky-100 bg-sky-50 text-blue-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/20 active:scale-95"
+            className="group flex h-11 w-11 items-center justify-center rounded-xl border border-sky-100 bg-sky-50 text-primary shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:bg-gradient-to-r from-green-500 to-lime-500
+ hover:text-white hover:shadow-lg hover:shadow-blue-500/20 active:scale-95 cursor-pointer"
           >
             <SlArrowUp className="text-lg transition-transform duration-300 group-hover:-translate-y-1" />
           </button>

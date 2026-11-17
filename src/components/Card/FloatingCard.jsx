@@ -6,7 +6,7 @@ const floatingData = [
     icon: FaProjectDiagram,
     totalProject: "250",
     title: "Projects Completed",
-    position: "top-left", 
+    position: "top-left",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const FloatingCard = () => {
                   flex h-9 w-9 sm:h-11 sm:w-11
                   items-center justify-center
                   rounded-xl sm:rounded-2xl
-                  bg-gradient-to-br from-emerald-500 to-cyan-500
+                        bg-gradient-to-r from-green-500 to-lime-500
                   text-white
                 "
               >

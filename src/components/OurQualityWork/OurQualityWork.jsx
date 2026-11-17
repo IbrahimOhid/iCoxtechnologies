@@ -110,7 +110,7 @@ const OurQualityWork = () => {
 
                   ${
                     isActive
-                      ? "bg-primary text-white shadow-md"
+                      ? "bg-gradient-to-r from-green-500 to-lime-500 text-white shadow-md"
                       : " text-slate-600 bg-white hover:text-primary "
                   }
                 `}

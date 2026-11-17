@@ -7,8 +7,8 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 
-  --color-primary: #196BB5;
-  --color-secondary: oklch(68.5% 0.169 237.323);
+  --color-primary: #167A32;
+  --color-secondary: #B4ED0B;
   --color-slate: #4a5565 ;
 }
 .container-section {
