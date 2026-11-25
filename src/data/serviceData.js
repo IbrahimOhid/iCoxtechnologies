@@ -1,97 +1,76 @@
 import {
   FaCode,
-  FaCloudUploadAlt,
   FaBullhorn,
   FaPaintBrush,
-  FaSearch,
-  FaVideo,
-  FaFacebook,
+  FaVideo
 } from "react-icons/fa";
+import { RiAdvertisementLine } from "react-icons/ri";
+
 
 export const servicesData = [
   {
     id: 1,
-    icon: FaCode,
-    title: "Custom Website Development",
-    description:
-      "Build bespoke websites tailored to your brand, optimized for performance, SEO, and user experience.",
+    icon: FaBullhorn,
+    title: "Social Media Management",
+    // description:
+    //   "Social media management, bulk SMS campaigns, and email marketing to boost your brand's reach and engagement.",
     features: [
-      "Responsive & mobile-first design",
-      "React Js",
-      "E-commerce functionality",
-      "SEO optimization included",
-      "3 month free technical support",
+      "Competitor research & strategy",
+      "Content planning & calendar",
+      "Post design, copywriting & posting",
+      "Monthly performance report",
     ],
   },
   {
     id: 2,
-    icon: FaBullhorn,
-    title: "Digital Marketing",
-    description:
-      "Social media management, bulk SMS campaigns, and email marketing to boost your brand's reach and engagement.",
+    icon: FaVideo,
+    title: "Video Editing & Production",
+    // description:
+    //   "Robust hosting with scalable resources, SSL certificates, and seamless CI/CD pipeline integration.",
     features: [
-      "Social media strategy & management",
-      "Bulk SMS campaigns",
-      "Email marketing automation",
-      "Analytics & performance reporting",
-      "Lead generation & conversion",
-      "3 month free technical support",
+      "Reels & short videos",
+      "Promotional & long videos",
+      "Shooting with our own gear",
+      "Motion graphics & color grading",
     ],
   },
   {
     id: 3,
-    icon: FaCloudUploadAlt,
-    title: "Project Hosting & Deployment",
-    description:
-      "Robust hosting with scalable resources, SSL certificates, and seamless CI/CD pipeline integration.",
+    icon: FaPaintBrush,
+    title: "Brand Creative Solution ",
+    // description:
+    //   "Professional graphic design services to create stunning visuals that elevate your brand identity and captivate your audience.",
     features: [
-      "Shared, VPS & dedicated hosting",
-      "Auto-scaling capabilities",
-      "Free SSL certificates",
-      "CI/CD pipeline setup",
-      "3 month free technical support",
+      "Logo & brand identity",
+      "Business card, pad & flyer",
+      "Social media graphics",
+      "Print & packaging design",
     ],
   },
   {
     id: 4,
-    icon: FaPaintBrush,
-    title: "Graphic Design",
-    description:
-      "Professional graphic design services to create stunning visuals that elevate your brand identity and captivate your audience.",
+    icon: RiAdvertisementLine,
+    title: "Paid Advertising",
+    // description:
+    //   "Professional video editing services to create compelling visual stories that engage your audience and elevate your brand.",
     features: [
-      "Logo & brand identity design",
-      "UI/UX design for web & mobile",
-      "Print materials & packaging",
-      "Social media graphics",
-      "3 month free technical support",
+      "Facebook & Instagram ads",
+      "TikTok & Google Ads",
+      "Audience targeting & boosting",
+      "Campaign tracking & reports",
     ],
   },
   {
     id: 5,
-    icon: FaVideo,
-    title: "Video Editing & Production",
-    description:
-      "Professional video editing services to create compelling visual stories that engage your audience and elevate your brand.",
+    icon: FaCode,
+    title: "Custom Website Development",
+    // description:
+    //   "Build bespoke websites tailored to your brand, optimized for performance, SEO, and user experience.",
     features: [
-      "Expert video editing & cutting",
-      "Motion graphics & visual effects",
-      "Color grading & audio enhancement",
-      "Social media & promotional videos",
+      "Business & portfolio websites",
+      "E-commerce websites",
+      "Domain, hosting & SSL",
       "3 month free technical support",
     ],
-  },
-  {
-    id: 6, 
-    icon: FaFacebook,
-    title: "Facebook Page Setup",
-    description:
-      "Establish a powerful Facebook presence with a professionally designed page, optimized for engagement and conversions.",
-    features: [
-      "Page creation & branding setup",
-      "Cover photo & profile design",
-      "About section & business info",
-      "Content strategy & posting schedule",
-      "3 month free technical support",
-    ]
   },
 ];

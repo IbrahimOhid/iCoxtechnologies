@@ -7,7 +7,7 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 
-  --color-primary: #167A32;
+  --color-primary: #012921;
   --color-secondary: #B4ED0B;
   --color-slate: #4a5565 ;
 }
@@ -31,4 +31,11 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+.morph {
+  background:
+    radial-gradient(55% 60% at 90% 0%, #167a32 0%, transparent 70%),
+    radial-gradient(45% 45% at 0% 100%, #0d5b20 0%, transparent 70%),
+    #012921;
 }

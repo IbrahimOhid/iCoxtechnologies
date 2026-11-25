@@ -16,7 +16,7 @@ import AllWorkButton from "../Button/AllWorkButton";
 
 const Hero = () => {
   return (
-    <section id="aboutUs" className="relative overflow-hidden bg-white">
+    <section id="aboutUs" className="relative overflow-hidden morph">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl" />
@@ -41,10 +41,10 @@ const Hero = () => {
             className="
     text-2xl sm:text-3xl md:text-4xl lg:text-5xl
     font-black leading-tight tracking-tight
-    text-slate-900
+    text-white
   "
           >
-            <span className="block">We design & build</span>
+            <span className="block">Your Complete </span>
             <span
               className="
       inline-block
@@ -52,9 +52,9 @@ const Hero = () => {
       bg-clip-text text-transparent
     "
             >
-              high-impact digital
+              Digital
             </span>
-            <span className="block">Experiences</span>
+            <span className="block">Solutions Partner.</span>
           </h1>
 
           {/* Description */}
@@ -65,14 +65,13 @@ const Hero = () => {
               max-w-xl
               text-base
               leading-8
-              text-slate
+              text-white
 
               sm:text-lg
             "
           >
-            A creative digital agency helping startups and businesses grow
-            through thoughtful design, scalable development and
-            performance-driven strategy.
+            From the first post to the final pixel - we plan, create, promote
+            and build your brand, all under one roof.
           </p>
 
           {/* Buttons */}
@@ -89,7 +88,7 @@ const Hero = () => {
           >
             <Button value={"Let's Talk"} phone={"01317878615"} />
 
-            <AllWorkButton value={"View Our Work"} />
+            <AllWorkButton value={"View Our Work"} path={"work"} />
           </div>
         </div>
 
