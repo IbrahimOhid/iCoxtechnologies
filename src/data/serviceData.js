@@ -20,6 +20,7 @@ export const servicesData = [
       "Post design, copywriting & posting",
       "Monthly performance report",
     ],
+    path: "social-media-management",
   },
   {
     id: 2,

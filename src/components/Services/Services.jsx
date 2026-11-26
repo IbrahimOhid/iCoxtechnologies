@@ -95,7 +95,7 @@ const Services = () => {
 
                 {/* CTA */}
                 <div className="pt-8">
-                  <ClickMore value="Click Here" href={service.href} />
+                  <ClickMore value="Click Here" path={service.path} />
                 </div>
               </article>
             );
