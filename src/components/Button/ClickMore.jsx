@@ -1,8 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-// Works on both light and dark backgrounds (it sits on a card that turns dark on hover).
-// Pass `href` to render a link, or `onClick` to render a button.
 const ClickMore = ({
   value = "Click Here",
   href,

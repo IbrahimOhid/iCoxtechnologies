@@ -15,10 +15,6 @@ const Services = () => {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1px_1px,rgba(6,78,59,0.09)_1px,transparent_0)] [background-size:24px_24px]"
       />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-32 right-0 -z-10 h-96 w-96 rounded-full bg-lime-300/30 blur-3xl"
-      />
 
       <div className="mx-auto max-w-7xl">
         <Heading
@@ -51,7 +47,7 @@ const Services = () => {
                 />
 
                 {/* Icon */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-lime-400 text-emerald-950 shadow-sm transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105 motion-reduce:transition-none">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-lime-400 text-white shadow-sm transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105 motion-reduce:transition-none">
                   <Icon className="h-8 w-8" />
                 </div>
 
@@ -106,8 +102,6 @@ const Services = () => {
           })}
         </div>
       </div>
-
-      <GrowBrand />
     </section>
   );
 };

@@ -273,7 +273,7 @@ const Header = () => {
             </nav>
 
             {/* CTA at bottom */}
-            <div className="mt-8 rounded-2xl border border-lime-200 bg-lime-50 p-4">
+            <div className="mt-8  rounded-2xl border border-lime-200 bg-lime-50 p-4">
               <WhatsAppButton />
             </div>
           </div>

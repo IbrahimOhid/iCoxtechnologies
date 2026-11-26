@@ -11,13 +11,13 @@ import Footer from './Footer'
 const Home = () => {
   return (
     <div>
-      <Hero/>
-      <Services/>
-      <OurClient/>
-      <OurQualityWork/>
-      <ContactUs/>
+      <Hero />
+      <OurClient />
+      <Services />
+      <OurQualityWork />
+      <ContactUs />
     </div>
-  )
+  );
 }
 
 export default Home

@@ -63,7 +63,7 @@ export const servicesData = [
   {
     id: 5,
     icon: FaCode,
-    title: "Custom Website Development",
+    title: "Website Development",
     // description:
     //   "Build bespoke websites tailored to your brand, optimized for performance, SEO, and user experience.",
     features: [
